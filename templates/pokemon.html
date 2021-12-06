@@ -1,0 +1,29 @@
+{%extends 'index.html'%}
+
+{%block content%}
+<h1>PokeDex</h1>
+<div class= "container">
+      <div class="row">
+                   {%for pokemon in response %}
+      <div class='col'>
+             <a href="/pokemon/{{pokemon.id}}">
+  <div class="card" style= "width: 18rem;">
+            <div class=card-body>
+                
+                <img class="card-img-top"src="{{pokemon.image}}" alt=""> <h5 class=card-title>{{pokemon.id}} {{pokemon.name}}  </h5>   
+            </div>
+             
+             </a>
+           
+           
+      </div>
+      </div>
+     
+             
+ {%endfor%}
+      </div>
+
+
+</div>
+
+{%endblock%}

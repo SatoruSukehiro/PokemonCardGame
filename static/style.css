@@ -1,0 +1,34 @@
+#header.jumbotron{
+   text-align: center;
+   border: 3pt red solid;
+}
+.poke-img{
+    width:100%;
+    height:100%;
+}
+a.nav-link{
+    color:black;
+}
+
+#poke-data{
+    border: 2px solid black;
+}
+
+#moves-data{
+    border: 2px solid black;
+}
+
+.card-img{
+    width: 50%;
+}
+
+.card.poke-data{
+    border: green solid 3pt;
+    height: 30%;
+}
+
+.type-banner{
+    width: 30%;
+    height: 30%;
+}
+

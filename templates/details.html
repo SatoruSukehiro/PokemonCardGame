@@ -1,0 +1,59 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+       
+<div class="container-fluid">
+    <div class="row">
+            <div class="card poke-data">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="poke-img" src="{{response.image}}" alt="">
+                    </div>
+                    
+                    <div class="col-8">
+                        <h3 class="card-title">{{response.name.capitalize()}}</h3>
+                        <div class="card-body">
+                         <h4 class="card-text">Health Points: {{response.hp}}</h4>  
+                         <h4 class="card-text"> Defense: {{response.defense}}</h4>
+                        <img class="type-banner"src="{{type}}" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>        
+        </div>
+           
+</div>
+   
+      <div class="row">
+    <div class="container">
+          <div id="moves-data"class="col-9">
+          <div class= "row">
+                   {%for move in moves%}
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img"src="{{move.type.image}}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{move.name}}</h5>
+                        <h6 class="card-text">
+                            Power:{{move.power}}
+                        </h6>
+                        <h6 class="card-text">
+                            {{move.details}}
+                        </h6>
+
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+          </div>
+   
+      </div>
+    </div>
+    
+      
+    </div>
+
+
+{%endblock%}

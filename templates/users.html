@@ -1,0 +1,23 @@
+{%extends 'index.html'%}
+
+
+
+{%block content%}
+<div class="container-fluid">
+    {%for user in response%}
+
+        <div class="row">
+            <div class="col-2">
+               <a href='/users/{{user.id}}'>{{user.username}}</a>  
+            </div>
+            <div class="col-6">
+                {%for pokemon in user.deck%}
+                {{pokemon}}
+                {%endfor%}
+        </div>
+        </div>
+        
+    {%endfor%}
+</div>    
+
+{%endblock%}

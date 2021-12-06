@@ -1,0 +1,37 @@
+{%extends 'index.html'%}
+
+
+{%block content%}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngitem.com%2Fpimgs%2Fs%2F337-3372671_pokemon-trainer-gold-sprite-hd-png-download.png&f=1&nofb=1" alt="" srcset="">
+            </div>
+            <div class='col-6'>
+                 
+                     username: <h3>{{response.username}} </h3>
+                
+        
+                <div class="card-body">
+                    <p class="card-text">
+                        Email: <h5>{{response.email}}</h5>
+                        luckynum : <h5>{{response.luckynum}}</h5>
+                        starter pokemon : <h5>{{response.starter}}</h5> 
+                        <button class="">Edit</button>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-fluid">
+            {%for pokemon in response.deck%}
+                <div class="row">
+
+                    <div>{{pokemon}}</div>
+                </div> 
+            {%endfor%}
+                       
+        </div>
+    </div>
+{%endblock%}
+

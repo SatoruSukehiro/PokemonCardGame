@@ -1,0 +1,60 @@
+{%extends 'index.html'%}
+{%block content%}
+<div class= "container">
+  <div class="row">
+               {%for move in response %}
+  <div class='col'>
+         <div class="card" style= "width: 18rem;">
+             <img class="card-img-top" src="{{move.type.image}}" alt="">
+        <div class=card-body>
+            <h5 class='card-title'> <b>{{move.id}}</b>{{move.name}}</h5>
+              
+        </div>
+         
+       
+  </div>
+  </div>
+ 
+         
+{%endfor%}
+  </div>
+
+
+</div>
+{%endblock%}
+
+
+
+
+<form>
+  <label for="firstname">
+    First Name:
+    <input id="firstname" type="text">
+  </label>
+  <label for="lastname">
+    Last Name:
+    <input id="lastname" type="text">
+  </label>
+  <input type="submit">
+  <h4>
+    My Dream Developer
+  </h4>
+<label for="apple">
+  Apple
+  <input type="radio" name="postions" value="apple"> 
+</label>
+
+<label for="google">
+  Google
+  <input type="radio" name="postions" value="google"> 
+</label>
+
+<label for="leafly">
+  Leafly
+  <input type="radio" name="postions" value="leafly"> 
+</label>
+<label for="infosys">
+  Infosys
+  <input type="radio" name="postions" value="infosys"> 
+</label>
+</form>
